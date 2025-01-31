@@ -30,6 +30,12 @@ def exponencial(base, exp):
         return 1
     return multiplicacao(base, exponencial(base, exp - 1))
 
+def fatorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return multiplicacao(n, fatorial(n - 1))
+
+
 # Testes
 print("Soma: ", soma(5, 3)) 
 print("Subtração: ", subtracao(10, 4)) 
@@ -37,3 +43,4 @@ print("Multiplicação: ", multiplicacao(2, 4))
 print("Divisão: ", divisao(7, 2))
 print("Resto da divisão: ", resto_divisao(7, 2))
 print("Exponencial: ", exponencial(4, 3))
+print("Fatorial: ", fatorial(5))

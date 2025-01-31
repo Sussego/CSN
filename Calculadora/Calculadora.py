@@ -9,7 +9,7 @@ def subtracao(a, b):
     return subtracao(a - 1, b - 1)
 
 def multiplicacao(a, b):
-    if b == 0:
+    if b == 0 or a == 0:
         return 0
     if b > 0:
         return soma(a, multiplicacao(a, b - 1))
@@ -39,7 +39,7 @@ def fatorial(n):
 # Testes
 print("Soma: ", soma(5, 3)) 
 print("Subtração: ", subtracao(10, 4)) 
-print("Multiplicação: ", multiplicacao(2, 4))
+print("Multiplicação: ", multiplicacao(4, 3))
 print("Divisão: ", divisao(7, 2))
 print("Resto da divisão: ", resto_divisao(7, 2))
 print("Exponencial: ", exponencial(4, 3))

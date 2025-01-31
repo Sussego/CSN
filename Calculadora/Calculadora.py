@@ -1,19 +1,18 @@
 def soma(a, b):
-    if b == 0:
-        return a
-    return soma(a + 1, b - 1)
+    return a + b
 
 def subtracao(a, b):
-    if b == 0:
-        return a
-    return subtracao(a - 1, b - 1)
+        return a - b 
 
 def multiplicacao(a, b):
     if b == 0 or a == 0:
         return 0
-    if b > 0:
+    if b > 0 and a > 0:
         return soma(a, multiplicacao(a, b - 1))
-    return -multiplicacao(a, -b)
+    if b < 0:
+        return -multiplicacao(a, -b)
+    if a < 0:
+        return -multiplicacao(-a, b)
 
 def divisao(a, b):
     if a < b:
@@ -39,7 +38,7 @@ def fatorial(n):
 # Testes
 print("Soma: ", soma(5, 3)) 
 print("Subtração: ", subtracao(10, 4)) 
-print("Multiplicação: ", multiplicacao(4, 3))
+print("Multiplicação: ", multiplicacao(-4, -3))
 print("Divisão: ", divisao(7, 2))
 print("Resto da divisão: ", resto_divisao(7, 2))
 print("Exponencial: ", exponencial(4, 3))

@@ -25,7 +25,10 @@ def resto_divisao(a, b):
         return a
     return resto_divisao(subtracao(a, b), b)
 
-
+def exponencial(base, exp):
+    if exp == 0:
+        return 1
+    return multiplicacao(base, exponencial(base, exp - 1))
 
 # Testes
 print("Soma: ", soma(5, 3)) 
@@ -33,3 +36,4 @@ print("Subtração: ", subtracao(10, 4))
 print("Multiplicação: ", multiplicacao(2, 4))
 print("Divisão: ", divisao(7, 2))
 print("Resto da divisão: ", resto_divisao(7, 2))
+print("Exponencial: ", exponencial(4, 3))
